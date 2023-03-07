@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genshin Impact | Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <!--        Media Queries   -->
+    <link rel="stylesheet" href="/css/screen.css">
+    <!--        FavIcon         -->
+    <link rel="shortcut icon" href="/asset/img/Paimon.logo.png" type="image/x-icon">
+    <!--        Google Fonts    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--        FontAwesome     -->
+    <script src="https://kit.fontawesome.com/377afbb3cd.js" crossorigin="anonymous"></script>
+    <!--        Bootstrap 5     -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <!--------------Body video background-->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="https://genshin.hoyoverse.com/_nuxt/videos/3e78e80.mp4" type="video/mp4">
+            <source src="https://genshin.hoyoverse.com/_nuxt/videos/3e78e80.webm" type="video/webm">
+        </video>
+    </div>
+
+     <!---------Audio Toggler--------->
+     <div id="msc">
+            <img src="/asset/img/muted_icon.png" alt="Mute" id="micons">         
+    </div>
+   
+    <audio id="mysong" loop>
+        <source src="/asset/sound/Genshin_Impact_Website_BGM(128k).mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        var mysong = document.getElementById("mysong");
+        var micons = document.getElementById("micons");
+
+        micons.onclick = function() {
+            if(mysong.paused){
+                mysong.play();
+                micons.src = "/asset/img/play_icon.png";
+            }else{
+                mysong.pause();
+                micons.src = "/asset/img/muted_icon.png";
+            }
+        }
+    </script>
+
+    <!--Div content-->
+        <div class="wrapper">
+            <div class="container main">
+                <div class="row">
+                    <div class="col-md-6 side-left">
+                        <!------Genshin Impact Logo--------->
+                        <img src="/asset/img/Genshin_Impact_logo.svg" alt="Genshin_Impact_logo">
+                        <div class="text">
+                            <h2>Welcome To Teyvat, Traveler</h2>
+                            <hr>
+                        </div>
+                        <div class="profile">
+                            <ul>
+                                <li class="ics1"><a href="https://www.facebook.com/profile.php?id=100009179603068" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                                <li class="ics2"><a href="#linkedin" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                                <li class="ics3"><a href="#github" target="_blank"><i class="fab fa-github"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="credits">
+                            <p><span style="color: crimson;">&copy;</span>Copyright 2023 <strong style="color: #fff;">Aniflux</strong>, All rights reserved.</p>
+                        </div>
+                    </div>
+
+                    <!---Right Side div-------->
+                    <div class="col-md-6 side-right">
+                        <div class="input-box">
+                            <header>Login to your Account</header>
+                            <div class="input-field">
+                                <input type="text" class="input" id="email" required autocomplete="off">
+                                <label for="email"><span style="color: crimson;">*</span>Email:</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="password" class="input" id="password" required autocomplete="off">
+                                <label for="password"><span style="color: crimson;">*</span>Password:</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="submit" class="submit" value="Login">
+                            </div>
+                            <div class="signup">
+                                <span>Don't have an account? <a href="#singup">Sign up here.</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="footer">
+                       <div class="container ftext">
+                        <h4>Now available on Several Platforms</h4>
+                        <div class="imicons">
+                            <div class="icons-img">
+                                <img src="/asset/img/ps4_logo_white.svg" alt="PS4 logo" width="85x" height="80px">
+                                <img src="/asset/img/PlayStation-PS5-White-Logo.wine.svg" alt="PS5 Logo" width="95px" height="95    px">
+                                <div class="icons">
+                                    <p><span><i class="fab fa-apple"></i></span>Apple Store</p>
+                                   </div>
+                                   <div class="icons">
+                                    <p><span><i class="fab fa-google-play"></i></span>Play Store</p>
+                                   </div>
+                                   <div class="icons">
+                                    <p><span><i class="fab fa-windows"></i></span>Windows</p>
+                                   </div>
+                               </div>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>
